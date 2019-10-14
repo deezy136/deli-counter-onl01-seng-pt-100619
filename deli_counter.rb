@@ -1,16 +1,17 @@
 # Write your code here.
 var katzDeli = [];
 
-function currentLine(line){
-  if(!line.length) {
-    return "The line is currently empty.";
-  }
-  var lineNamesandNumbers = [];
+def currentLine(line)
+  if(!line.length) 
+    return "The line is currently empty."
+  end
+   lineNamesandNumbers = []
   
-  for(var i=0; i<line.length; i++) {
-    lineNamesandNumbers.push(i+1 + ". "+ line[i]);
-  }
-  console.log("The line is currently: " + lineNamesandNumbers)
+  i =0
+  while i < line.length 
+      lineNamesandNumbers.push(i+1 + ". "+ line[i])
+  end 
+ puts"The line is currently: " + lineNamesandNumbers
   return "The line is currently: " + lineNamesandNumbers.join(', ');
 }
 
@@ -24,10 +25,10 @@ def nowServing(line)
   end
 end
 
-function takeANumber(line, name){
-  line.push(name);
+def takeANumber(line, name)
+  line.push(name)
   
-  console.log("Welcome, " + name + ". You are number " + line.length + " in line.");
+ puts("Welcome, " + name + ". You are number " + line.length + " in line.")
   
   return "Welcome, " + name + ". You are number " + line.length + " in line."
 }
