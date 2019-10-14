@@ -14,15 +14,15 @@ function currentLine(line){
   return "The line is currently: " + lineNamesandNumbers.join(', ');
 }
 
-function nowServing(line) {
-  if(!line.length) {
-    console.log("There is nobody waiting to be served!")
+def nowServing(line) 
+  if(!line.length) 
+   puts "There is nobody waiting to be served!"
     return "There is nobody waiting to be served!"
-  } else {
-    //console.log("Currently serving " + line.shift());
-    return "Currently serving " + line.shift();
-  }
-}
+   else 
+    #puts ("Currently serving " + line.shift());
+    return "Currently serving " + line.shift
+  end
+end
 
 function takeANumber(line, name){
   line.push(name);
