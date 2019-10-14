@@ -1,34 +1,36 @@
-# Write your code here.
-var katzDeli = [];
+def take_a_number(array, name)
+  array.push(name)
+  position = array.index(name)
+  puts "Welcome, #{name}. You are number #{array.index(name)+1} in line."
+  return name, position 
+end 
 
-def currentLine(line)
-  if(!line.length) 
-    return "The line is currently empty."
-  end
-   lineNamesandNumbers = []
-  
-  i =0
-  while i < line.length 
-      lineNamesandNumbers.push(i+1 + ". "+ line[i])
+take_a_number(katz_deli, "Grace")
+take_a_number(katz_deli, "Tom")
+take_a_number(katz_deli, "Alan")
+
+def line(array) 
+  if array.length == 0 
+    puts "The line is currently empty."
+  else 
+    message = "The line is currently:"
+    
+  array.each_with_index do |value, index| 
+    message += " #{index.to_i+1}. #{value}"
   end 
- puts"The line is currently: " + lineNamesandNumbers
-  return "The line is currently: " + lineNamesandNumbers.join(', ');
-end
+  puts "#{message}"
+  end 
+end 
+ 
+line(katz_deli)
 
-def nowServing(line) 
-  if(!line.length) 
-   puts "There is nobody waiting to be served!"
-    return "There is nobody waiting to be served!"
-   else 
-    #puts ("Currently serving " + line.shift());
-    return "Currently serving " + line.shift
-  end
-end
 
-def takeANumber(line, name)
-  line.push(name)
-  
- puts("Welcome, " + name + ". You are number " + line.length + " in line.")
-  
-  return "Welcome, " + name + ". You are number " + line.length + " in line."
-end
+def now_serving(array)
+  if array.empty? == true 
+    puts "There is nobody waiting to be served!"
+  elsif array.empty? == false 
+    puts "Currently serving #{array.shift}."
+  end 
+end 
+
+now_serving(katz_deli)
