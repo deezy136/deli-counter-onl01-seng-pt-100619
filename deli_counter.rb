@@ -13,7 +13,7 @@ def currentLine(line)
   end 
  puts"The line is currently: " + lineNamesandNumbers
   return "The line is currently: " + lineNamesandNumbers.join(', ');
-}
+end
 
 def nowServing(line) 
   if(!line.length) 
